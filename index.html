@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#101a55">
+<title>Catálogo de PACs 3M | Dauto Tintas</title>
+<style>
+:root{--blue:#101a55;--blue2:#182b86;--bg:#f4f6fb;--card:#fff;--line:#e6e9f2;--ink:#151922;--muted:#687086}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink)}
+.topbar{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
+.nav{max-width:1180px;margin:auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{display:flex;align-items:center;gap:14px} .logo-dauto{height:46px;max-width:200px;object-fit:contain}
+.logo-3m{height:34px;width:auto} .sep{width:1px;height:34px;background:#ddd} .nav-title{font-size:13px;font-weight:700;color:var(--muted)}
+.hero{background:linear-gradient(135deg,#101a55,#263fa7 60%,#4a2185);color:#fff}
+.hero-inner{max-width:1180px;margin:auto;padding:50px 18px 44px;display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:center}
+.hero h1{font-size:clamp(34px,6vw,64px);line-height:1;margin:14px 0;letter-spacing:-.04em} .hero p{max-width:700px;line-height:1.55;color:#e8ebff}
+.pill{display:inline-block;padding:7px 11px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);font-size:12px;font-weight:700}
+.hero-card{padding:24px;border-radius:22px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18)}
+.hero-card strong{display:block;font-size:30px;margin-bottom:6px}
+.controls-wrap{max-width:1180px;margin:-22px auto 0;padding:0 18px;position:relative;z-index:2}
+.controls{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px;box-shadow:0 12px 28px rgba(20,30,80,.10);display:flex;gap:12px}
+.search{flex:1} .search input{width:100%;height:48px;border:1px solid var(--line);border-radius:11px;padding:0 14px;font-size:15px}
+.counter{display:flex;align-items:center;font-size:13px;color:var(--muted);font-weight:700;white-space:nowrap}
+.main{max-width:1180px;margin:auto;padding:32px 18px 60px} .main h2{margin:0 0 18px;font-size:28px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 6px 18px rgba(18,26,73,.05)}
+.card-media{position:relative;aspect-ratio:4/3;background:#eef1f7;overflow:hidden} .card-media img{width:100%;height:100%;object-fit:cover;object-position:top}
+.badge{position:absolute;left:12px;top:12px;background:rgba(16,26,85,.94);color:#fff;padding:7px 10px;border-radius:999px;font-size:11px;font-weight:700}
+.card-body{padding:18px;display:flex;flex-direction:column;gap:14px;flex:1} .card h3{margin:0;font-size:19px}
+.line span,.reward span{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);font-weight:700;margin-bottom:5px}
+.line strong,.reward strong{font-size:14px;line-height:1.4} .reward{padding:13px;border-radius:12px;background:#f3f5ff;border:1px solid #e2e6fb}
+.reward strong{color:var(--blue2)} .view-btn{margin-top:auto;height:44px;border:0;border-radius:11px;background:var(--blue);color:#fff;font-weight:700;cursor:pointer}
+.empty{display:none;background:#fff;border:1px dashed #cbd1e2;border-radius:15px;padding:30px;text-align:center;color:var(--muted)}
+footer{background:#fff;border-top:1px solid var(--line)} .foot{max-width:1180px;margin:auto;padding:22px 18px;font-size:12px;color:var(--muted)}
+.modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(7,10,26,.82);z-index:30}
+.modal.open{display:flex} .modal-box{width:min(960px,100%);max-height:94vh;background:#fff;border-radius:16px;overflow:hidden}
+.modal-head{height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 14px 0 18px;border-bottom:1px solid var(--line)}
+.modal-head button{width:38px;height:38px;border:0;border-radius:10px;background:#f1f3f8;font-size:24px;cursor:pointer}
+.modal-body{max-height:calc(94vh - 56px);overflow:auto;background:#eef1f7} .modal-body img{display:block;max-width:100%;height:auto;margin:auto}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.hero-inner{grid-template-columns:1fr}.hero-card{display:none}}
+@media(max-width:620px){.nav{padding:10px 12px}.logo-dauto{height:36px;max-width:145px}.logo-3m{height:26px}.nav-title{display:none}
+.hero-inner{padding:36px 14px 38px}.controls-wrap{padding:0 12px}.controls{flex-direction:column}.main{padding:28px 12px 50px}
+.grid{grid-template-columns:1fr;gap:14px}.card-media{aspect-ratio:16/10}}
+</style>
+</head>
+<body>
+<header class="topbar"><div class="nav"><div class="brand">
+<img src="assets/dauto_logo.png" class="logo-dauto" alt="Dauto Tintas"><span class="sep"></span>
+<img src="assets/3m_logo.png" class="logo-3m" alt="3M"></div><div class="nav-title">Catálogo de PACs 3M</div></div></header>
+
+<section class="hero"><div class="hero-inner"><div>
+<span class="pill">FIX Especial de Blitz · Edição Limitada</span>
+<h1>Catálogo de PACs 3M</h1>
+<p>Consulte rapidamente as condições de compra, bonificações e a arte completa de cada PAC.</p>
+</div><div class="hero-card"><strong>10 PACs</strong><span>Catálogo digital responsivo para PC e celular.</span></div></div></section>
+
+<div class="controls-wrap"><div class="controls"><div class="search">
+<input id="searchInput" type="search" placeholder="Buscar por PAC, produto ou bonificação..." oninput="filterCards()">
+</div><div class="counter" id="counter">10 PACs encontrados</div></div></div>
+
+<main class="main"><h2>Campanhas disponíveis</h2><div class="grid" id="grid">
+    <article class="card" data-search="pac abrasivo espumado + trizact 60 discos e folhas abrasivas de espuma + 40 discos trizact ganhe 1 lixadeira pneumática espumados">
+      <div class="card-media">
+        <img src="assets/pac01.jpg" alt="PAC Abrasivo Espumado + Trizact" loading="lazy">
+        <span class="badge">Espumados</span>
+      </div>
+      <div class="card-body">
+        <h3>PAC Abrasivo Espumado + Trizact</h3>
+        <div class="line"><span>Na compra de</span><strong>60 Discos e Folhas Abrasivas de Espuma + 40 Discos Trizact</strong></div>
+        <div class="reward"><span>Você ganha</span><strong>Ganhe 1 Lixadeira Pneumática</strong></div>
+        <button class="view-btn" onclick="openPac('assets/pac01.jpg', 'PAC Abrasivo Espumado + Trizact')">Ver PAC completo</button>
+      </div>
+    </article>
+
+    <article class="card" data-search="pac espumado - bônus blue 60 discos e folhas abrasivas de espuma ganhe 200 discos blue espumados">
+      <div class="card-media">
+        <img src="assets/pac02.jpg" alt="PAC Espumado - Bônus Blue" loading="lazy">
+        <span class="badge">Espumados</span>
+      </div>
+      <div class="card-body">
+        <h3>PAC Espumado - Bônus Blue</h3>
+        <div class="line"><span>Na compra de</span><strong>60 Discos e Folhas Abrasivas de Espuma</strong></div>
+        <div class="reward"><span>Você ganha</span><strong>Ganhe 200 Discos Blue</strong></div>
+        <button class="view-btn" onclick="openPac('assets/pac02.jpg', 'PAC Espumado - Bônus Blue')">Ver PAC completo</button>
+      </div>
+    </article>
+
+    <article class="card" data-search="pac abrasivos + discos de corte 1.000 discos blue, blue net, csd, ffad ou gold + 5 discos de corte ganhe 1 lixadeira pneumática discos">
+      <div class="card-media">
+        <img src="assets/pac03.jpg" alt="PAC Abrasivos + Discos de Corte" loading="lazy">
+        <span class="badge">Discos</span>
+      </div>
+      <div class="card-body">
+        <h3>PAC Abrasivos + Discos de Corte</h3>
+        <div class="line"><span>Na compra de</span><strong>1.000 Discos Blue, Blue Net, CSD, FFAD ou Gold + 5 Discos de Corte</strong></div>
+        <div class="reward"><span>Você ganha</span><strong>Ganhe 1 Lixadeira Pneumática</strong></div>
+        <button class="view-btn" onclick="openPac('assets/pac03.jpg', 'PAC Abrasivos + Discos de Corte')">Ver PAC completo</button>
+      </div>
+    </article>
+
+    <article class="card" data-search="pac blue net 500 discos blue net + 3 rolos blue net ganhe 2 tacos aspirados ou 1 lixadeira pneumática blue net">
+      <div class="card-media">
+        <img src="assets/pac04.jpg" alt="PAC Blue Net" loading="lazy">
+        <span class="badge">Blue Net</span>
+      </div>
+      <div class="card-body">
+        <h3>PAC Blue Net</h3>
+        <div class="line"><span>Na compra de</span><strong>500 Discos Blue Net + 3 Rolos Blue Net</strong></div>
+        <div class="reward"><span>Você ganha</span><strong>Ganhe 2 Tacos Aspirados ou 1 Lixadeira Pneumática</strong></div>
+        <button class="view-btn" onclick="openPac('assets/pac04.jpg', 'PAC Blue Net')">Ver PAC completo</button>
+      </div>
+    </article>
+
+    <article class="card" data-search="pac correias + roloc 100 correias abrasivas e discos roloc + 10 discos de corte ganhe 200 discos blue correias / roloc">
+      <div class="card-media">
+        <img src="assets/pac05.jpg" alt="PAC Correias + Roloc" loading="lazy">
+        <span class="badge">Correias / Roloc</span>
+      </div>
+      <div class="card-body">
+        <h3>PAC Correias + Roloc</h3>
+        <div class="line"><span>Na compra de</span><strong>100 Correias Abrasivas e Discos Roloc + 10 Discos de Corte</strong></div>
+        <div class="reward"><span>Você ganha</span><strong>Ganhe 200 Discos Blue</strong></div>
+        <button class="view-btn" onclick="openPac('assets/pac05.jpg', 'PAC Correias + Roloc')">Ver PAC completo</button>
+      </div>
+    </article>
+
+    <article class="card" data-search="pac esponja abrasiva 60 esponjas abrasivas dupla face ganhe 200 discos blue espumas">
+      <div class="card-media">
+        <img src="assets/pac06.jpg" alt="PAC Esponja Abrasiva" loading="lazy">
+        <span class="badge">Espumas</span>
+      </div>
+      <div class="card-body">
+        <h3>PAC Esponja Abrasiva</h3>
+        <div class="line"><span>Na compra de</span><strong>60 Esponjas Abrasivas Dupla Face</strong></div>
+        <div class="reward"><span>Você ganha</span><strong>Ganhe 200 Discos Blue</strong></div>
+        <button class="view-btn" onclick="openPac('assets/pac06.jpg', 'PAC Esponja Abrasiva')">Ver PAC completo</button>
+      </div>
+    </article>
+
+    <article class="card" data-search="pac blue net - extratora 2.000 discos blue net + 4 rolos blue net ganhe 1 extratora de pó blue net">
+      <div class="card-media">
+        <img src="assets/pac07.jpg" alt="PAC Blue Net - Extratora" loading="lazy">
+        <span class="badge">Blue Net</span>
+      </div>
+      <div class="card-body">
+        <h3>PAC Blue Net - Extratora</h3>
+        <div class="line"><span>Na compra de</span><strong>2.000 Discos Blue Net + 4 Rolos Blue Net</strong></div>
+        <div class="reward"><span>Você ganha</span><strong>Ganhe 1 Extratora de Pó</strong></div>
+        <button class="view-btn" onclick="openPac('assets/pac07.jpg', 'PAC Blue Net - Extratora')">Ver PAC completo</button>
+      </div>
+    </article>
+
+    <article class="card" data-search="pac correias abrasivas - filebelt 75 correias abrasivas + 300 folhas ou discos abrasivos + 5 discos de corte ganhe 1 lixadeira de correia 18” correias">
+      <div class="card-media">
+        <img src="assets/pac08.jpg" alt="PAC Correias Abrasivas - Filebelt" loading="lazy">
+        <span class="badge">Correias</span>
+      </div>
+      <div class="card-body">
+        <h3>PAC Correias Abrasivas - Filebelt</h3>
+        <div class="line"><span>Na compra de</span><strong>75 Correias Abrasivas + 300 Folhas ou Discos Abrasivos + 5 Discos de Corte</strong></div>
+        <div class="reward"><span>Você ganha</span><strong>Ganhe 1 Lixadeira de Correia 18”</strong></div>
+        <button class="view-btn" onclick="openPac('assets/pac08.jpg', 'PAC Correias Abrasivas - Filebelt')">Ver PAC completo</button>
+      </div>
+    </article>
+
+    <article class="card" data-search="pac máquina de corte 15 discos de corte + 400 folhas ou discos abrasivos ganhe 1 máquina de corte 3” corte">
+      <div class="card-media">
+        <img src="assets/pac09.jpg" alt="PAC Máquina de Corte" loading="lazy">
+        <span class="badge">Corte</span>
+      </div>
+      <div class="card-body">
+        <h3>PAC Máquina de Corte</h3>
+        <div class="line"><span>Na compra de</span><strong>15 Discos de Corte + 400 Folhas ou Discos Abrasivos</strong></div>
+        <div class="reward"><span>Você ganha</span><strong>Ganhe 1 Máquina de Corte 3”</strong></div>
+        <button class="view-btn" onclick="openPac('assets/pac09.jpg', 'PAC Máquina de Corte')">Ver PAC completo</button>
+      </div>
+    </article>
+
+    <article class="card" data-search="pac roloc 75 discos roloc + 300 folhas ou discos abrasivos + 5 discos de corte ganhe 1 pistola roloc 2” roloc">
+      <div class="card-media">
+        <img src="assets/pac10.jpg" alt="PAC Roloc" loading="lazy">
+        <span class="badge">Roloc</span>
+      </div>
+      <div class="card-body">
+        <h3>PAC Roloc</h3>
+        <div class="line"><span>Na compra de</span><strong>75 Discos Roloc + 300 Folhas ou Discos Abrasivos + 5 Discos de Corte</strong></div>
+        <div class="reward"><span>Você ganha</span><strong>Ganhe 1 Pistola Roloc 2”</strong></div>
+        <button class="view-btn" onclick="openPac('assets/pac10.jpg', 'PAC Roloc')">Ver PAC completo</button>
+      </div>
+    </article></div>
+<div class="empty" id="empty">Nenhum PAC encontrado.</div></main>
+
+<footer><div class="foot"><strong>Dauto Tintas + 3M</strong><br>Promoções sujeitas à disponibilidade de estoque e às condições comerciais informadas nas artes.</div></footer>
+
+<div class="modal" id="modal" onclick="if(event.target.id==='modal') closeModal()"><div class="modal-box">
+<div class="modal-head"><strong id="modalTitle">PAC</strong><button onclick="closeModal()">×</button></div>
+<div class="modal-body"><img id="modalImg" src="" alt=""></div></div></div>
+
+<script>
+function filterCards(){
+ const q=document.getElementById('searchInput').value.toLowerCase().trim();
+ const cards=[...document.querySelectorAll('.card')]; let n=0;
+ cards.forEach(c=>{const ok=c.dataset.search.includes(q);c.style.display=ok?'':'none';if(ok)n++;});
+ document.getElementById('counter').textContent=n+(n===1?' PAC encontrado':' PACs encontrados');
+ document.getElementById('empty').style.display=n?'none':'block';
+}
+function openPac(src,title){
+ document.getElementById('modalImg').src=src;
+ document.getElementById('modalTitle').textContent=title;
+ document.getElementById('modal').classList.add('open');
+ document.body.style.overflow='hidden';
+}
+function closeModal(){
+ document.getElementById('modal').classList.remove('open');
+ document.body.style.overflow='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+</script>
+</body></html>
